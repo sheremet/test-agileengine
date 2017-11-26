@@ -10,7 +10,7 @@ import {Location} from '@angular/common';
 })
 export class UserDetailsEditComponent implements OnInit {
 
-  private currentUserId: number;
+  currentUserId: number;
 
   constructor(private route: ActivatedRoute,
               private location: Location) {
