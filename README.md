@@ -7,7 +7,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Branches
 
 `master` - Latest changes
+
 `gh-pages` - Production build
+
+## Releases:
+
+Latest: [v0.0.2](https://github.com/sheremet/test-agileengine/releases/tag/v0.0.2)
+
+## WiKi
+
+[Task description](https://github.com/sheremet/test-agileengine/wiki/Task-Description)
 
 ## Development server
 
