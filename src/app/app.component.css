@@ -1,0 +1,26 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: lightgrey;
+}
+
+.small-text {
+  font-size: 0.5rem;
+}
+
+.main-content {
+  min-height: 700px;
+}
+
+.app-title a{
+  color: inherit;
+}
+
+.app-title a:hover, .app-title a:visited{
+  cursor: pointer;
+  text-decoration: none;
+}

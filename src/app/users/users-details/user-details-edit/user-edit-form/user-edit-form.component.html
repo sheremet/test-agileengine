@@ -1,0 +1,68 @@
+<div *ngIf="!loaded">{{ loadingMessage }}</div>
+<div *ngIf="loaded && formSavedMessage">
+  <div class="alert alert-success" role="alert">{{ formSavedMessage }}</div>
+</div>
+<div class="controller" *ngIf="loaded">
+  <div class="container">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+      <div class="container">
+        <h3 class="text-center">Account info:</h3>
+
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Name" controlName="name"
+                                [form]="userForm"></app-form-control-field>
+
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Username" controlName="username"
+                                [form]="userForm"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Email" controlName="email"
+                                [form]="userForm"></app-form-control-field>
+      </div>
+      <div class="container">
+        <h3 class="text-center">Contact info:</h3>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Website" controlName="website"
+                                [form]="userForm"
+                                infoMessage="Please enter website with http://YOUR_WEBSITE_DOMAIN or https://YOUR_WEBSITE_DOMAIN "></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Phone" controlName="phone"
+                                [form]="userForm"></app-form-control-field>
+      </div>
+      <div class="container">
+        <h3 class="text-center">Company info:</h3>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Company name" controlName="name"
+                                [form]="userForm.get('company')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Company catch phrase"
+                                controlName="catchPhrase"
+                                [form]="userForm.get('company')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Bs" controlName="bs"
+                                [form]="userForm.get('company')"></app-form-control-field>
+      </div>
+      <div class="container">
+        <h3 class="text-center">Address:</h3>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Street" controlName="street"
+                                [form]="userForm.get('address')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Suite" controlName="suite"
+                                [form]="userForm.get('address')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="City" controlName="city"
+                                [form]="userForm.get('address')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Zipcode" controlName="zipcode"
+                                [form]="userForm.get('address')"></app-form-control-field>
+        <h4 class="text-center">Geo:</h4>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Latitude" controlName="lat"
+                                [form]="userForm.get('address.geo')"></app-form-control-field>
+        <app-form-control-field [formSubmitStatus]="formSubmitStatus" placeholder="Longitude" controlName="lng"
+                                [form]="userForm.get('address.geo')"></app-form-control-field>
+      </div>
+      <div class="container">
+        <div class="d-flex justify-content-sm-center">
+          <div class="m-2 text-center">
+            <input type="submit" class="btn btn-primary" value="Submit">
+          </div>
+          <div class="m-2 text-center">
+            <input type="reset" (click)="reset()" class="btn btn-secondary" value="Reset form">
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+

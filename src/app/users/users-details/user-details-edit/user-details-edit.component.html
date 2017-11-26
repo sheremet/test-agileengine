@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button class="back btn btn-primary" (click)="goBack()">Back</button>
+    </div>
+    <h2>User Edit</h2>
+    <div class="col">
+      <button routerLink="../" class="btn btn-primary float-right">View</button>
+    </div>
+  </div>
+  <app-user-edit-form [currentUserId]="currentUserId"></app-user-edit-form>
+</div>
