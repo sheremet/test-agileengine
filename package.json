@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --build-optimizer",
+    "build": "ng build",
+    "build:prod": "ng build --prod --build-optimizer",
     "build:gh-pages": "ng build --prod --build-optimizer --base-href=/test-agileengine/",
     "test": "ng test",
     "lint": "ng lint",

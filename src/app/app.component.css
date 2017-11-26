@@ -24,3 +24,12 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+
+a.footer-link {
+  color: white;
+  text-decoration: underline;
+}
+
+a.footer-link:hover {
+  text-decoration: none;
+}
