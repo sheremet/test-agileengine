@@ -6,7 +6,7 @@ import {of} from 'rxjs/observable/of';
 import {catchError, map, tap} from 'rxjs/operators';
 
 
-const apiBaseUrl = 'http://jsonplaceholder.typicode.com';
+const apiBaseUrl = 'https://jsonplaceholder.typicode.com';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
